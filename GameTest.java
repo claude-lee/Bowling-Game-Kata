@@ -25,6 +25,15 @@ public class GameTest {
 		assertEquals(game.score(), 20);
 	}
 	
+	@Test
+	public void canScoreSpareFollowedByThree(){
+		game.roll(5);
+		game.roll(5);
+		game.roll(3);
+		roll(17, 1);
+		assertEquals(game.score(), 16);
+	}
+	
 	private void roll(int times, int pinsDown){
 		for(int i=0; i<times; i++){
 			game.roll(pinsDown);
