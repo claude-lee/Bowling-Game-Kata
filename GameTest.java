@@ -5,11 +5,6 @@ import org.junit.Test;
 
 public class GameTest {
 	
-	@Test
-	public void canRollBall(){
-		Game game = new Game();
-		game.roll(0);
-	}
 	
 	@Test
 	public void canScoreGutterGame(){
