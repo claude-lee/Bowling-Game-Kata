@@ -5,5 +5,9 @@ public class Game {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public int score(){
+		return 0;
+	}
 
 }
