@@ -30,7 +30,7 @@ public class GameTest {
 		game.roll(5);
 		game.roll(5);
 		game.roll(3);
-		roll(17, 1);
+		roll(17, 0);
 		assertEquals(game.score(), 16);
 	}
 	
