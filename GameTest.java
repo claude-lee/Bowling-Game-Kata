@@ -17,7 +17,7 @@ public class GameTest {
 		for(int i=0; i<20; i++){
 			game.roll(0);
 		}
-		assertEquals(game.score(), 20);
+		assertEquals(game.score(), 0);
 	}
 
 	
