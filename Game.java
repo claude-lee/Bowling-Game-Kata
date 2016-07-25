@@ -1,13 +1,17 @@
 
 public class Game {
+	
+	private int score = 0;
 
 	public void roll(int pinsDown) {
-		// TODO Auto-generated method stub
+		score += pinsDown;
 		
 	}
 	
 	public int score(){
-		return 0;
+		
+		
+		return score;
 	}
 
 }
