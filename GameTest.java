@@ -36,6 +36,12 @@ public class GameTest {
 		game.roll( 10, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 );
 		assertEquals(game.score(), 22);
 	}
+	
+	@Test
+	public void canScorePerfectGame(){
+		game.roll( 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 );
+		assertEquals(game.score(), 300);
+	}
 
     
 	
