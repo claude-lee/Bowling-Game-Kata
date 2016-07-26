@@ -7,12 +7,18 @@ public class Game {
 	public void roll(int pinsDown) {
 		rolls[roll++] = pinsDown;
 	}
+	
+	public void roll(int... rolls){
+		for(int pinsDown: rolls){
+			roll(pinsDown);
+		}
+	}
 
 	public int score(){
 		int score = 0;
 		int cursor = 0;
 		for(int frame=0; frame<10; frame++){
-			if(rolls[cursor] + rolls[cursor+1] == 10){
+			if(isSpare(cursor)){
 				score += 10 + rolls[cursor+2];
 				cursor+=2;
 			}else{
@@ -21,6 +27,11 @@ public class Game {
 			}
 		}
 		return score;
+	}
+	
+	private boolean isSpare(int cursor){
+		return rolls[cursor] + rolls[cursor+1] == 10;
+		
 	}
 
 }

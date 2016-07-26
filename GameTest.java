@@ -15,30 +15,23 @@ public class GameTest {
 	
 	@Test
 	public void canScoreGutterGame(){
-		roll(20, 0);
+		game.roll( 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 );
 		assertEquals(game.score(), 0);
 	}
 	
 	@Test
 	public void canScoreGameOfOnes(){
-		roll(20, 1);
+		game.roll( 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1, 1,1 );
 		assertEquals(game.score(), 20);
 	}
 	
 	@Test
 	public void canScoreSpareFollowedByThree(){
-		game.roll(5);
-		game.roll(5);
-		game.roll(3);
-		roll(17, 0);
+		game.roll( 5,5, 3,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 );
 		assertEquals(game.score(), 16);
 	}
 	
-	private void roll(int times, int pinsDown){
-		for(int i=0; i<times; i++){
-			game.roll(pinsDown);
-		}
-	}
+
 
 	
 }
