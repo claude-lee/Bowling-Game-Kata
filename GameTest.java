@@ -31,7 +31,12 @@ public class GameTest {
 		assertEquals(game.score(), 16);
 	}
 	
+	@Test
+	public void canScoreStrikeFollowedByThreeThree(){
+		game.roll( 10, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0 );
+		assertEquals(game.score(), 22);
+	}
 
-
+    
 	
 }
